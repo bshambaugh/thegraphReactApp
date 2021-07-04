@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import Courses from './Courses';
+import Saturn from './Saturn';
+import Mercury from './Mercury';
+import Venus from './Venus';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const client = new ApolloClient({
+//    uri: "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2"
+      uri: 'https://api.thegraph.com/subgraphs/name/superfluid-finance/superfluid-goerli'
+});
+
+const App = () => (
+  <ApolloProvider client={client}>
+    <div>
+        <Saturn />
+	<Mercury/>
+	<Venus/>
     </div>
-  );
-}
+  </ApolloProvider>
+)
 
 export default App;
