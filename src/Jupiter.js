@@ -1,7 +1,7 @@
 import SuperfluidSDK from "@superfluid-finance/js-sdk"
 import { Web3Provider } from"@ethersproject/providers"
 // Goerli:
-const fDAIx = "0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00"
+const ETHx = "0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947"
 // Rinkeby:
 //const fDAIx = "0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7"
 
@@ -28,21 +28,21 @@ const Venus = () => {
       // get user and details
       const carol = sf.user({
         address: walletAddress[0],
-        token: fDAIx
+        token: ETHx
       })
       const details = await carol.details()
 
       console.log(details)
 
       await carol.flow({
-       recipient: '0xA8f3447922d786045CB582B0C825723B744a54df',
-       flowRate: '385802469135802'
+       recipient: '0x8ced5ad0d8da4ec211c17355ed3dbfec4cf0e5b9',
+       flowRate: '38'
       });
 
       console.log(details)
 
       await carol.flow({
-       recipient: '0xA8f3447922d786045CB582B0C825723B744a54df',
+       recipient: '0x8ced5ad0d8da4ec211c17355ed3dbfec4cf0e5b9',
        flowRate: '0'
       });
 
