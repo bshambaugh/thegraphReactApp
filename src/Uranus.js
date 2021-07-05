@@ -5,7 +5,7 @@ const ETHx = "0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947"
 // Rinkeby:
 //const fDAIx = "0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7"
 
-const Jupiter = () => {
+const Uranus = () => {
 
   const getDetails = async () => {
      alert('I am connected');
@@ -32,6 +32,7 @@ const Jupiter = () => {
       })
       const details = await carol.details()
 
+/*	  
       console.log(details)
 
       await carol.flow({
@@ -40,22 +41,20 @@ const Jupiter = () => {
       });
 
       console.log(details)
-
-/*	  
+*/
       await carol.flow({
        recipient: '0x8ced5ad0d8da4ec211c17355ed3dbfec4cf0e5b9',
        flowRate: '0'
       });
 
       console.log(details)
-*/
   }
 
   return (
     <div>
-      <button onClick={() => getDetails()}>Start Payment Stream</button>
+      <button onClick={() => getDetails()}>Stop Payment Stream</button>
     </div>
   )
 }
 
-export default Jupiter;
+export default Uranus;

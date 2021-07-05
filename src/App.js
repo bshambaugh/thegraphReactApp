@@ -3,6 +3,7 @@ import Saturn from './Saturn';
 import Mercury from './Mercury';
 import Venus from './Venus';
 import Jupiter from './Jupiter';
+import Uranus from './Uranus';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import './App.css';
@@ -17,8 +18,8 @@ const App = () => (
   <ApolloProvider client={client}>
     <div>
         <Saturn />
-	<Mercury/>
         <Jupiter/>
+	<Uranus />
     </div>
   </ApolloProvider>
 )
